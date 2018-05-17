@@ -3,6 +3,8 @@ Archivos de ENERGIA.
 dado lo justo que va de tamaño el programa final, se recomienda usar la versión 16 (0101E0016) de Energía. 
 A partir de la siguiente se han encontrado problemas con el tamaño del código (parece que el compilador no optiimiza tanto). Dado que el código final ocupa 2011 de los 2048 bytes, cualquier cambio puede afectar. 
 - - -
+Novedad: Se ha optimizado el código y ya cabe, incluso compilado con la versión 17. Finalmente ocupa, eso sí, 2046 de los 2048 bytes disponibles... 
+- - -
 La conexión entre la placa y un Launchpad G2 se hará con 4 cables hembra-hembra como se muestra en la imagen:
 ![Montaje](20170321_121245.jpg)
 - - -
