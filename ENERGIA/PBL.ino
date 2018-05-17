@@ -1,6 +1,6 @@
 //COPIAR AQUÍ EL VALOR OBTENIDO EN LA CALIBRACIÓN
 //------------------------------
-int OFFSET=-9;
+const int OFFSET=-9;
 //------------------------------
 
 #include "pbl.h"
@@ -25,13 +25,13 @@ void setup()         // Programada en Bajo Nivel para que quepa
 
 byte ciclo=0;
 byte numero=0;
-int t=0;
+byte t=0;
 int T;
-byte PER=20;
+byte  PER = 20;
 int TREF=210;
 int Vin=0;
 int DIG[3];
-int BOT[]={
+byte BOT[]={
   0,0,0};
 int Trep=0;
 
@@ -41,8 +41,8 @@ byte DC=5;
 
 void saca_d(int num)    // Descompone un nº en 3 digitos y guarda la representación en DIG
 {
-  int i=0;
-  while(num>=100) {
+  byte i=0;
+ while(num>=100) {
     num-=100;
     i++;
   }   // Dividir entre 100 por restas sucesivas
@@ -54,14 +54,17 @@ void saca_d(int num)    // Descompone un nº en 3 digitos y guarda la representa
   }      // Dividir entre 10 por restas sucesivas
   DIG[1]=DISPL[i]+0x40; 
   DIG[0]=DISPL[num];  //Punto decimal en el 2º digito
-}
+  }
 
 void loop()
 {
+   byte idx;		// idx: 5MSB del dato (indice para interpolar)
+ byte resto;
   delay(DC);        //  Tiempo en ON (display anterior). entre 0 y 5ms
-  digitalWrite(3,LOW);
+  /*digitalWrite(3,LOW);
   digitalWrite(4,LOW);
-  digitalWrite(5,LOW);
+  digitalWrite(5,LOW);*/
+  P1OUT &= 0xF1;
   P2OUT=DIG[ciclo];  
   delay(5-DC);      // Tiempo en OFF, entre 0 y 5 ms
 //  P1OUT|=BIT4;      // Comienzo ciclo: se usa para medir tiempo de actividad
@@ -90,8 +93,10 @@ void loop()
       }
     }
     else{
-      if(BOT[1]>=5*BOT_PULS_LARGA && (BOT[0]+BOT[2])==0)
+       if(BOT[1]>250 && (BOT[0]+BOT[2])==0)
+       //if(BOT[0]>BOT_PULS && BOT[1]>BOT_PULS && BOT[2]>BOT_PULS )
       {
+        BOT[1]=250;
         if(Estado_Display<10) Estado_Display=10;
         PER=50;
       }
@@ -145,8 +150,8 @@ void loop()
                       // CADA (20*3*5=300)ms se rehacen las medidas
 
       Vin=analogRead(A0)-OFFSET;  // Valor medido más error calculado
-      int idx=Vin>>5;		// idx: 5MSB del dato (indice para interpolar)
-      int resto=Vin-(idx*32);	// resto: 5LSB del dato
+      idx=Vin>>5;		// idx: 5MSB del dato (indice para interpolar)
+      resto=Vin-(idx*32);	// resto: 5LSB del dato
       int T=T_tab[idx];		// T: la que sale de la tabla
       // Tlineal: incremento sobre T (interp. lineal)
       int Tlineal=((T_tab[idx+1]-T_tab[idx])*resto)>>5;

@@ -2,7 +2,7 @@
 CODIFICACION DE NUMEROS Y LETRAS EN 7SEGMENTOS, 
 CON LA CONEXION DE LA PLACA
 ************************************************/
-byte DISPL[]={
+const byte DISPL[]={
 		0xB7,	//0
 		0x84,	//1
 		0x2F,	//2
@@ -30,14 +30,14 @@ byte DISPL[]={
 VECTOR CON LAS DIRECCIONES DE LOS PINES DEL P2,
 ORDENADAS, PARA USARLO DE MANERA ITERATIVA
 ************************************************/
- byte P_2[]={8,9,10,11,12,13,19,18};
+const  byte P_2[]={8,9,10,11,12,13,19,18};
 
 /*********************************************** 
 TABLA DE 32 COEFICIENTES (5BITS) CALCULADA EN 
 MATLAB, PARA PASAR DE MEDIDA DEL ADC (0..1024) 
 A TEMPERATURA*10 (0..500)
 ************************************************/
- int T_tab[32]={0,
+ const unsigned int T_tab[32]={0,
 8, 
 29, 
 49, 
@@ -76,9 +76,10 @@ VECTOR CON LOS PINES DE LOS CATODOS COMUNES:
 K1=PIN 5, K2=PIN 3, K3=PIN 4
 ************************************************/
 
-byte KK[]={4,3,5};
+const byte KK[]={4,3,5};
 
 #define TREPOSO 3000     //TIEMPO PARA ENTRAR EN REPOSO
 #define  BOT_PULS 5      //TIEMPO PARA DAR BOTON COMO PULSADO (5*15MS=75MS)
 #define BOT_PULS_LARGA 60//TIEMPO PARA PULSACION LENTA: 60*15MS= 0.9S
+
 
