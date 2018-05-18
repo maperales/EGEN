@@ -1,8 +1,9 @@
-Versión final de los archivos de Eagle de la placa
+Versión actual de los archivos de Eagle de la placa
 ==================================================
 La placa está fabricada a doble cara, con taladros metalizados y un ancho de pista estndar de 16mils. En estas condiciones, resulta 
 un poco compleja de fabricar con métodos *artesanales*. Los ficheros incluidos son:
-- placa2caras_v4.sch: esquema de la placa
-- placa2caras_v4.brd: rutado de la placa
-- placa2caras_v4_TOP.pdf: impresión de la cara superior, en pdf sin escalar ni hacer *mirror*.
-- placa2caras_v4_BOTT.pdf: impresión de la cara inferior, en pdf, sin escalar ni hacer *mirror*
+- placa2caras_v1718.sch: esquema de la placa
+- placa2caras_v1718.brd: rutado de la placa
+- placa2caras_v1718_TOP.pdf: impresión de la cara superior, en pdf sin escalar ni hacer *mirror*.
+- placa2caras_v1718_BOTT.pdf: impresión de la cara inferior, en pdf, sin escalar ni hacer *mirror*
+
