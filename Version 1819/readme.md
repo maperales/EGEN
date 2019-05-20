@@ -12,7 +12,7 @@ Por otro lado, se ha situado la NTC en la parte superior del divisor resistivo, 
   - **PBL_CAL.ino**: fichero de calibración de la placa. Cambia porque incorpora en sí mismo la tabla de valores 
 
 **Muy Importante: recuerda que para poder programar la placa deberás seguir los pasos que se indican en el directorio [ENERGIA][dir_raiz] que cuelga del principal**
-[dir_raiz] :https://github.com/maperales/EGEN/ENERGÍA/
+[dir_raiz]: https://github.com/maperales/EGEN/ENERGÍA/
 
 
 
