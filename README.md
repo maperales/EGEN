@@ -4,4 +4,4 @@ En este repositorio se pueden encontrar todos los archivos necesarios para repli
   - EAGLE: archivos de Eagle para realizar la placa
   - ENERGIA: programas en energía con la funcionalidad desarrollada
 ## Novedad: 
-Se incorpora el directorio VERSION 18-19 con los ficheros desarrollados en dicho curso (cambios en el esquema y en el programa)
+Se incorpora el directorio VERSION 19-20 con los ficheros desarrollados en dicho curso (cambios en el esquema y en el programa)
