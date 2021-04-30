@@ -7,6 +7,7 @@ ventajas, como que se usa un único amplificador, y que éste está en modo ampl
 Por otro lado, se ha situado la NTC en la parte superior del divisor resistivo, para que el cambio de signo debido a usar un amplificador no inversor se compense. El efecto es que las ecuaciones son prácticamente iguales, y en cualquier caso al crecer la temperatura crece la tensión en el ADC. Lo único que habrá que cambiar, por tanto, es la tabla de valores de T en función de la tensión (fichero pbl.h). A modo de resumen:
   - **Placa2caras_CTO2_4.brd**: trazado de pistas del diseño
   - **Placa2caras_CTO2_4.sch**: esquema del diseño realizado
+  - **placa2caras_CTO4_corregido.json**: trazado de pistas definitivo, en EasyEDA, con los logos y demás.
   - **Pbl.ino**: fichero Energia para programar el microcontrolador. Igual al del año pasado
   - **Pbl.h**: fichero de librería. Contiene la nueva tabla de valores. Éste sí ha cambiado
   - **PBL_CAL.ino**: fichero de calibración de la placa. Cambia porque incorpora en sí mismo la tabla de valores 
