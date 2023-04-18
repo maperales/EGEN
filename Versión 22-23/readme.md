@@ -8,6 +8,8 @@ A modo de resumen:
   - **placa2caras_23.brd**: trazado de pistas del diseño
   - **placa2caras_23.sch**: esquema del diseño realizado
   - **placa2caras_CTO4_2023.json**: trazado de pistas definitivo, en EasyEDA, con los logos y demás.
+  - **PBL_CAL.INO**: programa para calibrar la placa
+  - ++PBL.INO / PBL.h**: programa y librería para programar finalmente la placa
 
 
 **Muy Importante: recuerda que para poder programar la placa deberás seguir los pasos que se indican en el directorio [https://github.com/maperales/EGEN/tree/master/ENERGIA]**
