@@ -151,7 +151,7 @@ void loop()
     if(t>=PER){       // PER=20 
                       // CADA (20*3*5=300)ms se rehacen las medidas
 
-      Vin=analogRead(A0)-OFFSET;  // Valor medido más error calculado
+      Vin=(Vin+analogRead(A0)-OFFSET)>>1;  // Valor medido más error calculado (filtrado)
       int idx=Vin>>5;		// idx: 5MSB del dato (indice para interpolar)
       int resto=Vin-(idx*32);	// resto: 5LSB del dato
       int T=T_tab[idx];		// T: la que sale de la tabla
