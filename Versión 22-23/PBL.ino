@@ -73,7 +73,9 @@ void loop()
   delay(5-DC);      // Tiempo en OFF, entre 0 y 5 ms
 //  P1OUT|=BIT4;      // Comienzo ciclo: se usa para medir tiempo de actividad
   digitalWrite(KK[ciclo],HIGH);  //Enciendo el K correspondiente
-  if(digitalRead(7)){            //Miro boton
+  //if(digitalRead(7)){            //Miro boton CAMBIADO PARA AHORRAR POR...
+  if(P1IN&BIT5){            //Miro boton
+
     BOT[ciclo]++; 
     Trep=0;   
   }
